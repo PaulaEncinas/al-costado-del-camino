@@ -1,0 +1,126 @@
+/* Variables de Color */
+:root {
+    --color-tierra-oscuro: #5D4037;
+    --color-tierra-claro: #8D6E63;
+    --color-verde-claro: #C8E6C9;
+    --color-verde-medio: #81C784;
+    --color-crema: #FBE9E7;
+    --color-blanco: #FFFFFF;
+}
+
+/*Estilos de los titulos y textos */
+body {
+    font-family: 'Lato', sans-serif; 
+    background-color: var(--color-crema);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .navbar-brand, .nav-link, .btn {
+    font-family: "Finger Paint", cursive;
+}
+/*La navegación */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .nav-link {
+    color: var(--color-tierra-oscuro);
+    font-weight: 600;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--color-verde-medio);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(93, 64, 55, 0.6), rgba(93, 64, 55, 0.6)), url('images/Banner_al_costado_del_camino.png'); /* Imagen genérica de paisaje */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+/* Estilos de los botones*/
+.btn {
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-custom {
+    background-color: var(--color-verde-medio);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-tierra-claro);
+    color: white;
+}
+
+/*Estilos de las secciones*/
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--color-tierra-oscuro);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-verde-medio);
+    margin: 10px auto 0;
+}
+
+.bg-light-custom {
+    background-color: var(--color-verde-claro);
+}
+
+/*Estilos de las cards de los viajes*/
+.card-viaje {
+    transition: transform 0.3s;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-viaje:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/*Estilos del carrusel en modal*/
+.carousel-item img {
+    height: 500px;           
+    object-fit: contain;     
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-item img {
+        height: 250px;
+    }
+}
